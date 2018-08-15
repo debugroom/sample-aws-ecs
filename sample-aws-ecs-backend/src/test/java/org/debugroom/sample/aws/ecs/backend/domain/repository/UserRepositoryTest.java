@@ -17,18 +17,19 @@ import org.debugroom.sample.aws.ecs.backend.domain.entity.User;
 
 @Slf4j
 @RunWith(SpringRunner.class)
-//@DataJpaTest
-@ContextConfiguration(classes = TestConfig.class)
+@DataJpaTest
+//@ContextConfiguration(classes = TestConfig.class)
 public class UserRepositoryTest {
 
-//    @Autowired
-//    TestEntityManager testEntityManager;
+    @Autowired
+    TestEntityManager testEntityManager;
 
     @Autowired
     UserRepository userRepository;
 
     @Test
     public void testFindAll() throws Exception{
+        testEntityManager.persist(User.builder().userId("1").userName("Test").build());
         List<User> users = userRepository.findAll();
         users.forEach(e -> log.info(e.getUserName()));
     }

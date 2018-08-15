@@ -1,9 +1,16 @@
 package org.debugroom.sample.aws.ecs.backend.domain.entity;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.NoArgsConstructor;
+
 import javax.persistence.*;
 import java.sql.Timestamp;
 import java.util.Objects;
 
+@AllArgsConstructor
+@NoArgsConstructor
+@Builder
 @Entity
 @Table(name = "usr", schema = "public", catalog = "tmp")
 public class User {
