@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://java.sun.com/xml/ns/persistence" version="2.0">
+
+    <persistence-unit name="sample-unit">
+        <class>org.debugroom.sample.aws.ecs.backend.domain.entity.Address</class>
+        <class>org.debugroom.sample.aws.ecs.backend.domain.entity.Affiliation</class>
+        <class>org.debugroom.sample.aws.ecs.backend.domain.entity.Email</class>
+        <class>org.debugroom.sample.aws.ecs.backend.domain.entity.Group</class>
+        <class>org.debugroom.sample.aws.ecs.backend.domain.entity.User</class>
+    </persistence-unit>
+</persistence>

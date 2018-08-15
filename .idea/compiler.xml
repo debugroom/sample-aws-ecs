@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="sample-aws-ecs-backend" />
+        <module name="sample-aws-ecs-frontend" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="sample-aws-ecs" target="1.5" />
+      <module name="sample-aws-ecs-backend" target="1.8" />
+      <module name="sample-aws-ecs-frontend" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
