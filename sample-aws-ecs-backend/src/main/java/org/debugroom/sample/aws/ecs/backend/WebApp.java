@@ -1,4 +1,4 @@
-package org.debugroom.sample.aws.ecs.backend.config;
+package org.debugroom.sample.aws.ecs.backend;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
