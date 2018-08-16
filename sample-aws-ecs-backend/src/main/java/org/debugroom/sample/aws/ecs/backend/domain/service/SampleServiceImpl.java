@@ -16,6 +16,7 @@ public class SampleServiceImpl implements SampleService {
 
     @Override
     public List<User> getUsers() {
-        return null;
+        return userRepository.findAll();
     }
+
 }
