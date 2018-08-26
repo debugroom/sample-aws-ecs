@@ -16,7 +16,6 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 import lombok.extern.slf4j.Slf4j;
 import org.debugroom.sample.aws.ecs.frontend.config.TestConfig;
-import org.debugroom.sample.aws.ecs.frontend.config.WebApp;
 
 @Slf4j
 @RunWith(Enclosed.class)

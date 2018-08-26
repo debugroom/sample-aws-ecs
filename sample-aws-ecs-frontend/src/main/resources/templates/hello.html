@@ -8,13 +8,28 @@
     <link rel="stylesheet" href="static/css/flex.css" media="(min-width: 1280px)">
     <link rel="stylesheet" href="static/css/flex_mobile.css" media="(min-width: 320px) and (max-width: 767px)">
     <link rel="stylesheet" href="static/css/flex_tablet.css" media="(min-width: 768px) and (max-width: 1279px)">
+    <link rel="stylesheet" href="static/css/hello.css" media="(min-width: 1280px)">
+    <link rel="stylesheet" href="static/css/hello_mobile.css" media="(min-width: 320px) and (max-width: 767px)">
+    <link rel="stylesheet" href="static/css/hello_tablet.css" media="(min-width: 768px) and (max-width: 1279px)">
     <script type="text/javascript" src="webjars/jquery/jquery.js"></script>
 </head>
 <body>
 <h1>Hello! AWS ECS sample!</h1>
-<tr th:each="user : ${users}">
-    <td th:text="${user.userId}"></td>
-    <td th:text="${user.userName}"></td>
-</tr>
+<table>
+    <thead>
+      <tr>
+        <th>No</th>
+        <th>User ID</th>
+        <th>User Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr th:each="user, status : ${users}">
+        <td th:text="${status.count}"></td>
+        <td th:text="${user.userId}"></td>
+        <td th:text="${user.userName}"></td>
+      </tr>
+    </tbody>
+</table>
 </body>
 </html>

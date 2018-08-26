@@ -3,6 +3,7 @@ package org.debugroom.sample.aws.ecs.frontend.config;
 import org.debugroom.sample.aws.ecs.frontend.app.adapter.ConnectServiceProvider;
 import org.debugroom.sample.aws.ecs.frontend.app.adapter.RandomAccessServiceProvider;
 import org.debugroom.sample.aws.ecs.frontend.app.adapter.ServicePathHolder;
+import org.debugroom.sample.aws.ecs.frontend.app.adapter.SimpleAccessServiceProvider;
 import org.debugroom.sample.aws.ecs.frontend.app.adapter.aws.DockerEnvironmentVariablesPathHolder;
 import org.debugroom.sample.aws.ecs.frontend.app.adapter.aws.EcsPathHolder;
 import org.debugroom.sample.aws.ecs.frontend.app.adapter.local.PropertyPathHolder;
@@ -94,4 +95,30 @@ public class TestConfig {
 
     }
 
+    @Configuration
+    @EnableConfigurationProperties
+    public static class SimpleAccessServiceProviderTestConfig{
+
+        @Bean(name = "ecsPathHolder")
+        ServicePathHolder servicePathHolder(){
+            return new EcsPathHolder();
+        }
+
+        @Bean(name="simpleAccessServiceProvider")
+        ConnectServiceProvider connectServiceProvider(){
+            return new SimpleAccessServiceProvider();
+        }
+
+        @Bean
+        RequestBuilder requestBuilder(){
+            return new RequestBuilder();
+        }
+
+        @Bean
+        UtilProperties utilProperties(){
+            return new UtilProperties();
+        }
+
+
+    }
 }
