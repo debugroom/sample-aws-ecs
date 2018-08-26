@@ -9,5 +9,6 @@
     <modules>
         <module>sample-aws-ecs-frontend</module>
         <module>sample-aws-ecs-backend</module>
+        <module>sample-aws-ecs-specification-api</module>
     </modules>
 </project>
