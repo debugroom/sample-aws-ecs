@@ -5,7 +5,7 @@
 
     <groupId>org.debugroom</groupId>
     <artifactId>sample-aws-ecs-backend</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>1.0.0-SNAPSHOT</version>
     <packaging>jar</packaging>
 
     <name>sample-aws-ecs-backend</name>
