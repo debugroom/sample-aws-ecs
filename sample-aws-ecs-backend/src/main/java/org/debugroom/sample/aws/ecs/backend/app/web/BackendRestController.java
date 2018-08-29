@@ -19,7 +19,8 @@ public class BackendRestController {
     @Autowired
     SampleService sampleService;
 
-    @RequestMapping(value="users", method=RequestMethod.GET)
+    @RequestMapping(value="users", method=RequestMethod.GET,
+            produces = "application/json; charset=utf-8")
     @ResponseStatus(HttpStatus.OK)
     public List<?> getUsers(){
         return sampleService.getUsers();
